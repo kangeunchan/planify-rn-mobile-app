@@ -2,11 +2,11 @@ import React from 'react';
 import { TouchableOpacity, Text } from 'react-native';
 
 import { styles } from '../styles/AccountPrimaryButton.styles.ts';
-import { ButtonProps } from '../types/AccountPrimaryButton.types.ts';
+import { AccountButtonProps } from '../types/AccountPrimaryButton.types.ts';
 
 import AccountIcon from '../../../assets/image/account/account.svg';
 
-const AccountPrimaryButton: React.FC<ButtonProps> = ({ title, onPress, disabled }) => {
+const AccountPrimaryButton: React.FC<AccountButtonProps> = ({ title, onPress, disabled }) => {
     return (
         <TouchableOpacity
             style={[styles.button, disabled && styles.disabledButton]}

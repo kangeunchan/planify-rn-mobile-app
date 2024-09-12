@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { SafeAreaView, View, Text, StyleSheet, TextInput, ImageBackground } from 'react-native';
 import AccountPrimaryButton from '../../atoms/button/components/AccountPrimaryButton.tsx';
 import AccountPrimaryInput from "../../atoms/input/components/AccountPrimaryInput.tsx";
+import TermsPrimaryButton from "../../atoms/button/components/TermsPrimaryButton.tsx";
 
 const TempTestPage: React.FC = () => {
     const [inputValue, setInputValue] = useState<string>('');
@@ -42,6 +43,8 @@ const TempTestPage: React.FC = () => {
                     <AccountPrimaryButton title="로그인하기" onPress={handleLoginPress} />
                     <View style={styles.spacer} />
                     <AccountPrimaryButton title="회원가입" onPress={handleSignupPress} />
+
+                    <TermsPrimaryButton title="개인정보처리방침" isNotNull={true} onPress={handleSignupPress}/>
                 </View>
             </SafeAreaView>
         </ImageBackground>
@@ -53,6 +56,7 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
+        backgroundColor: 'white',
     },
     container: {
         flex: 1,
@@ -71,6 +75,10 @@ const styles = StyleSheet.create({
     spacer: {
         height: 20,
     },
+    componentSpacing: {
+        marginVertical: 10, // 각 컴포넌트 사이에 일정한 여백 추가
+    },
 });
+
 
 export default TempTestPage;
