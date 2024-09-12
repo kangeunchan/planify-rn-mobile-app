@@ -34,8 +34,6 @@ const TempTestPage: React.FC = () => {
                     <AccountPrimaryInput
                         label="아이디"
                         isNotNull={true}
-                        value={inputValue}
-                        onChangeText={handleInputChange}
                         placeholder="아이디를 입력하세요"
                     />
 
