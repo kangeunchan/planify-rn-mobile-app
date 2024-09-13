@@ -1,13 +1,9 @@
 import React from 'react';
 import { TextInputProps, View, TextInput, Text } from 'react-native';
 import { styles } from "../styles/AccountPrimaryInput.styles.ts";
+import {AccountPrimaryInputProps} from "../types/AccountPrimaryInput.types.ts";
 
-interface AccountPrimaryInputProps extends TextInputProps {
-    label?: string;
-    isNotNull?: boolean;
-}
-
-const AccountPrimaryInput: React.FC<AccountPrimaryInputProps> = ({ label, isNotNull, placeholder, ...props }) => {
+const AccountPrimaryInput: React.FC<AccountPrimaryInputProps> = ({ label, isNotNull, placeholder, secureTextEntry, ...props }) => {
     return (
         <View style={styles.container}>
             <View style={styles.labelContainer}>
@@ -17,6 +13,7 @@ const AccountPrimaryInput: React.FC<AccountPrimaryInputProps> = ({ label, isNotN
             <TextInput
                 style={styles.input}
                 placeholder={placeholder}
+                secureTextEntry={secureTextEntry}
                 {...props}
             />
         </View>
