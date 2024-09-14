@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-import { SafeAreaView, View, Text, StyleSheet, TextInput, ImageBackground } from 'react-native';
+import { SafeAreaView, View, Text, StyleSheet, ImageBackground } from 'react-native';
 import AccountPrimaryButton from '../../atoms/button/components/AccountPrimaryButton.tsx';
 import AccountPrimaryInput from "../../atoms/input/components/AccountPrimaryInput.tsx";
 import TermsPrimaryButton from "../../atoms/button/components/TermsPrimaryButton.tsx";
+import Logo from "../../atoms/logo/components/Logo.tsx";
 
 const TempTestPage: React.FC = () => {
-    const [inputValue, setInputValue] = useState<string>('');
+    const [inputValue] = useState<string>('');
 
     const handleLoginPress = () => {
         console.log('Login button pressed');
@@ -14,11 +15,6 @@ const TempTestPage: React.FC = () => {
 
     const handleSignupPress = () => {
         console.log('Signup button pressed');
-    };
-
-    const handleInputChange = (text: string) => {
-        setInputValue(text);
-        console.log('Input changed:', text);
     };
 
     return (
@@ -41,6 +37,9 @@ const TempTestPage: React.FC = () => {
                     <AccountPrimaryButton title="로그인하기" onPress={handleLoginPress} />
                     <View style={styles.spacer} />
                     <AccountPrimaryButton title="회원가입" onPress={handleSignupPress} />
+                    <TermsPrimaryButton title="개인정보처리방침" isNotNull={true} onPress={handleSignupPress}/>
+
+                    <Logo></Logo>
                 </View>
             </SafeAreaView>
         </ImageBackground>
