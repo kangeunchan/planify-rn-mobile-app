@@ -4,6 +4,7 @@ import AccountPrimaryButton from '../../atoms/button/components/AccountPrimaryBu
 import AccountPrimaryInput from "../../atoms/input/components/AccountPrimaryInput.tsx";
 import TermsPrimaryButton from "../../atoms/button/components/TermsPrimaryButton.tsx";
 import Logo from "../../atoms/logo/components/Logo.tsx";
+import ProgressBar from "../../atoms/progressbar/components/ProgressBar.tsx";
 
 const TempTestPage: React.FC = () => {
     const [inputValue] = useState<string>('');
@@ -40,6 +41,7 @@ const TempTestPage: React.FC = () => {
                     <TermsPrimaryButton title="개인정보처리방침" isNotNull={true} onPress={handleSignupPress}/>
 
                     <Logo></Logo>
+                    <ProgressBar progress={10}/>
                 </View>
             </SafeAreaView>
         </ImageBackground>
