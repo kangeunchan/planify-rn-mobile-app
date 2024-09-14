@@ -37,7 +37,6 @@ const TempTestPage: React.FC = () => {
                     <AccountPrimaryButton title="로그인하기" onPress={handleLoginPress} />
                     <View style={styles.spacer} />
                     <AccountPrimaryButton title="회원가입" onPress={handleSignupPress} />
-
                     <TermsPrimaryButton title="개인정보처리방침" isNotNull={true} onPress={handleSignupPress}/>
 
                     <Logo></Logo>

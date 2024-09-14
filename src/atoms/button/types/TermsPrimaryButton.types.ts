@@ -1,6 +1,6 @@
 export interface TermsButtonProps {
     title: string;
-    onPress: () => void;
+    onPress?: () => void;
     disabled?: boolean;
     isNotNull?: boolean;
 }
