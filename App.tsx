@@ -16,8 +16,8 @@ const App: React.FC = () => {
     return (
         <NavigationContainer>
             <Stack.Navigator>
-                <Stack.Screen name="Login" component={LoginPage} />
                 <Stack.Screen name="Test" component={TempTestPage} />
+                <Stack.Screen name="Login" component={LoginPage} />
             </Stack.Navigator>
         </NavigationContainer>
     );
